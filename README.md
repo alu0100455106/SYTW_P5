@@ -12,13 +12,8 @@
 
 ### Ejecucion
 
- 1. Introduciendo el comando:
-      `rake`
-    Arrancará el servidor.
-
- 2. Utilizando la opción:
-      `rake test`
-    Ejecutaremos todas las pruebas.
+ 1. Introduciendo el comando: `rake` Arrancará el servidor.
+ 2. Utilizando la opción: `rake test` Ejecutaremos todas las pruebas.
 
 ### Visualización
  
