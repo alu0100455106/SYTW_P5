@@ -2,13 +2,13 @@
 
 ![](http://rubyskyepi.com/wp-content/uploads/2012/07/rock-paper-scissors-620x350.jpg)
 
-## Añadir hojas de estilo a Rock, Paper & Scissors.
+## Añadir Pruebas a Rock, Paper & Scissors.
 
 ***
 
 ### Descripción
 
-   Añadir Pruebas a Rock, Paper & Scissors
+   La realización de esta práctica consiste en añadir Pruebas a la ya conocida aplicación Rock, Paper & Scissors.
 
 ### Ejecucion
 
