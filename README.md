@@ -1,16 +1,24 @@
-# Practica 4 - SYTW
+# Practica 5 - SYTW
 
-### Añadir hojas de estilo a Rock, Paper & Scissors.
+![](http://rubyskyepi.com/wp-content/uploads/2012/07/rock-paper-scissors-620x350.jpg)
 
----
+## Añadir Pruebas a Rock, Paper & Scissors.
 
-## Descripción
+***
 
-   as
+### Descripción
 
-## Ejecucion
+   La realización de esta práctica consiste en añadir Pruebas a la ya conocida aplicación Rock, Paper & Scissors.
 
- 1. Introduciendo el comando:
-      $ rake
- 2. Arrancará el servidor
- 3. Introduciendo [http://localhost:9292/] (http://localhost:9292/) en un explorador para visualizar.
+### Ejecucion
+
+ 1. Introduciendo el comando: `rake` Arrancará el servidor.
+ 2. Utilizando la opción: `rake test` Ejecutaremos todas las pruebas.
+
+### Visualización
+ 
+ Se realiza introduciendo [http://localhost:9292/] (http://localhost:9292/) en un explorador.
+
+*** 
+
+#### ETSII - Universidad de La Laguna
