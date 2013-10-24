@@ -7,7 +7,8 @@ group :desarrollo do
 end   
 
 group :test do
-        gem 'rack-test'
+   gem 'rspec'
+   gem 'rack-test'
 end
 
 

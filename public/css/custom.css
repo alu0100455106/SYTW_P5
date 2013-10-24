@@ -28,6 +28,15 @@ h2 {
   color: black;
 }
 
+h5 {
+  font-size: 0.6em;  
+  text-align: right;
+  font-weight: normal;
+  color: darkblue;
+  margin-bottom: 0px;
+  margin-right: 50px;
+}
+
 
 p {
   font-size: 1.1em;

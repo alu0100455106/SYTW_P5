@@ -18,15 +18,12 @@
     
           %h2 You vs Computer
 
+          Choose one:
+          %img{:src => 'public/images/animado.gif'}
           %p    
-            .figure
-
-              Choose one:
-              %img{:src => 'public/images/animado.gif'}
-              %p    
-                %a{:href => '?choice=rock'} Rock
-                %a{:href => '?choice=paper'} Paper
-                %a{:href => '?choice=scissors'} Scissors            
+            %a{:href => '?choice=rock'} Rock
+            %a{:href => '?choice=paper'} Paper
+            %a{:href => '?choice=scissors'} Scissors            
                         
     - else
       %h2
@@ -41,7 +38,28 @@
           .figure3
             = answer
         
-        .grid_8    
+        .grid_2    
           %atras
             %a{:href=>'/'}
               %img{:src=> 'public/images/atras.gif'}  
+    
+    %h4
+      Ganadas (poner imagen)
+      = plays['wins']
+
+    %h4
+      Perdidas (poner imagen)
+      = plays['defeats']      
+      
+    %h4
+      Empates (poner imagen)
+      = plays['ties']
+      
+    %h4
+      Total jugadas (poner imagen)
+      = plays['ties'] + plays['defeats'] + plays['wins'] 
+      
+      
+    #footer.container_12
+      .grid_12
+        %h5 ETSII - Universidad de La Laguna - 2013

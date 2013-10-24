@@ -12,6 +12,7 @@ module RockPaperScissors
          @content_type = :html
          @defeat = {'rock' => 'scissors', 'paper' => 'rock', 'scissors' => 'paper'}
          @throws = @defeat.keys
+         @plays = {'wins' => 0, 'defeats' => 0, 'ties' => 0}
       end
       
       def call(env)
@@ -26,10 +27,13 @@ module RockPaperScissors
             if !@throws.include?(player_throw)
                "Choose one"
             elsif player_throw == computer_throw
+               @plays['ties'] += 1
                "<pre>There is a tie     </pre>"
             elsif computer_throw == @defeat[player_throw]
+               @plays['wins'] += 1
                "<pre>Well done. You win; #{player_throw} beats #{computer_throw}        </pre>" 
             else
+               @plays['defeats'] += 1
                "<pre>Computer wins; #{computer_throw} defeats #{player_throw}   </pre>"
             end
 
@@ -41,15 +45,21 @@ module RockPaperScissors
          engine = Haml::Engine.new File.open("views/index.haml").read
          res = Rack::Response.new
          
+         #res.set_cockie("cookie", {:value => @plays, :path => "/", :expire => Time.now+24*60*60})
+         
          #Añadimos la info al template
          res.write engine.render({},
             :answer => answer,
             :resultado => resultado,
-            :player_throw => player_throw,               
-            :throws => @throws)        
+            :plays => @plays,
+            :player_throw => player_throw)
          res.finish
          
       end # call
    end # App
 end # RockPaperScissors
 
+
+                            
+                       
+                       
