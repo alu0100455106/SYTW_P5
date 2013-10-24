@@ -13,7 +13,8 @@
 ### Ejecucion
 
  1. Introduciendo el comando: `rake` Arrancará el servidor.
- 2. Utilizando la opción: `rake test` Ejecutaremos todas las pruebas.
+ 2. Utilizando la opción: `rake test` Ejecutaremos todas las pruebas unitarias.
+ 3. Utilizando la opción: `rake spec` Ejecutaremos todas los tests Rspec.
 
 ### Visualización
  
