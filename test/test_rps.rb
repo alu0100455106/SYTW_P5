@@ -1,17 +1,18 @@
 require "test/unit"
-require "./lib/rps"
 require "rack/test"
+require './lib/rps.rb'
 
-class RPS_Test < Test::Unit::TestCase
+
+class AppTest < Test::Unit::TestCase
    include Rack::Test::Methods
    
    def app
       Rack::Builder.new do
          run RockRaperScissors::App.new
-      end
+      end.to_app
    end
    
-   def test_home
+   def test_index
       get "/"
       assert last_response.ok?
    end
@@ -19,7 +20,7 @@ class RPS_Test < Test::Unit::TestCase
    def test_rock
       get "/?choise=rock"
       assert last_response.ok?
-   end.
+   end
 
    def test_paper
       get "/?choise=paper"
@@ -31,11 +32,7 @@ class RPS_Test < Test::Unit::TestCase
       assert last_response.ok?
    end
    
-   #def test_head
-   #   get "/"
-   #   assert_match "<title>RPS con Haml.</title>"last_response.body
-   #end 
-   
+  
    def test_head
       get "/"
       assert last_response.head.include? ("RPS con Haml.")
@@ -48,7 +45,7 @@ class RPS_Test < Test::Unit::TestCase
 
    def test_static_asset
       get "/public/css/custom.css"
-      asser last_response.ok?
+      assert last_response.ok?
    end
-   
-end
+    
+end   

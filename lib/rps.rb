@@ -28,18 +28,18 @@ module RockPaperScissors
                "Choose one"
             elsif player_throw == computer_throw
                @plays['ties'] += 1
-               "<pre>There is a tie     </pre>"
+               "There is a tie"
             elsif computer_throw == @defeat[player_throw]
                @plays['wins'] += 1
-               "<pre>Well done. You win; #{player_throw} beats #{computer_throw}        </pre>" 
+               "Well done. You win; #{player_throw} beats #{computer_throw}" 
             else
                @plays['defeats'] += 1
-               "<pre>Computer wins; #{computer_throw} defeats #{player_throw}   </pre>"
+               "Computer wins; #{computer_throw} defeats #{player_throw}"
             end
 
          resultado = ""
          if !answer.empty?
-         resultado.insert(0, "<pre>Your chose: <img src='./public/images/#{player_throw}.gif'>      Computer chose: <img src='./public/images/#{computer_throw}.gif'>             </pre>")
+         resultado.insert(0, "Your chose: <img src='./public/images/#{player_throw}.gif'>      Computer chose: <img src='./public/images/#{computer_throw}.gif'>")
          end            
             
          engine = Haml::Engine.new File.open("views/index.haml").read
