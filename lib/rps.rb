@@ -45,7 +45,6 @@ module RockPaperScissors
          engine = Haml::Engine.new File.open("views/index.haml").read
          res = Rack::Response.new
          
-         #res.set_cockie("cookie", {:value => @plays, :path => "/", :expire => Time.now+24*60*60})
          
          #Añadimos la info al template
          res.write engine.render({},
