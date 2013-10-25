@@ -1,14 +1,16 @@
 require "test/unit"
 require "rack/test"
-require './lib/rps.rb'
+require 'rps'
 
 
-class AppTest < Test::Unit::TestCase
+module RockPaperScissors
+   
+class RockPaperScissorsAppTest < Test::Unit::TestCase
    include Rack::Test::Methods
    
    def app
       Rack::Builder.new do
-         run RockRaperScissors::App.new
+         run ::RockPaperScissors::App.new
       end.to_app
    end
    
@@ -35,7 +37,7 @@ class AppTest < Test::Unit::TestCase
   
    def test_head
       get "/"
-      assert last_response.head.include? ("RPS con Haml.")
+      assert last_response.body.include? ("RPS con Haml.")
    end    
    
    def test_body
@@ -49,3 +51,5 @@ class AppTest < Test::Unit::TestCase
    end
     
 end   
+
+end
