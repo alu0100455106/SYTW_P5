@@ -19,7 +19,7 @@ module RockPaperScissors
          @session = env['rack.session']
       end
 
-      def wins 
+      def win 
          return @session['win'].to_i if @session['win']
          @session['win'] = 0
       end
