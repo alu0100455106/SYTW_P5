@@ -44,6 +44,11 @@ class RockPaperScissorsAppTest < Test::Unit::TestCase
       get "/"
       assert last_response.body.include? ("ETSII - Universidad de La Laguna - 2013")
    end
+   
+   def test_falla
+      get "/"
+      assert last_response.body.include? ("Esto no debería aparecer en el body")
+   end   
 
    def test_static_asset
       get "/public/css/custom.css"

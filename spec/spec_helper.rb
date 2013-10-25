@@ -6,5 +6,5 @@ $:.unshift File.dirname(__FILE__)
 require 'rspec'
 require 'rack'
 
-require 'rsack'
-require 'rack-test'
+require 'rps'
+require 'rack/test'
