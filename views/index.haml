@@ -45,19 +45,20 @@
     
     %h4
       Ganadas
-      = ganadas
+      = play["wins"]
 
     %h4
       Perdidas
-      = perdidas
+      = play["defeats"]
       
     %h4
       Empates
-      = empates
+      = play["ties"]
       
     %h4
       Total jugadas
-      = ganadas + perdidas + empates
+      = play["wins"] + play["defeats"] + play["ties"]
+      
       
       
     #footer.container_12
